@@ -8,6 +8,6 @@ var server = express_1.default();
 server.get('/', function (req, res) {
     res.send('Hello World 11111');
 });
-server.listen(3400, function () {
+server.listen(process.env.PORT || 3400, function () {
     console.log('Server is Running');
 });
