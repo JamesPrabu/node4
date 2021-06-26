@@ -31,7 +31,7 @@ server.get('/bmi', function (req, res) {
         var data = bmiData_1[_i];
         calc(data);
     }
-    var result = bmiData.filter(function (x) { return x.bmi >= 25 && x.bmi <= 29.9; });
+    var result = bmiData.filter(function (x) { return x.bmi && x.bmi >= 25 && x.bmi <= 29.9; });
     res.send(result);
 });
 function calc(data) {

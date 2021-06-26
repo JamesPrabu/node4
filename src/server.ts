@@ -32,7 +32,7 @@ server.get('/bmi', (req, res)=> {
     for(const data of bmiData) {
         calc(data);
     }
-    const result = bmiData.filter(x => x.bmi >= 25 && x.bmi <= 29.9);
+    const result = bmiData.filter(x => x.bmi && x.bmi >= 25 && x.bmi <= 29.9);
     res.send(result);
     });
 
